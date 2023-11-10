@@ -1,0 +1,17 @@
+;
+; BIND data file for local loopback interface
+;
+$TTL	604800
+@	IN	SOA	elohim.asa.br. root.asa.br. (
+			   1234		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+@	IN  MX 10 mail.asa.br.
+@	IN	NS	ns1.asa.br.
+
+ns1			A	10.25.2.109
+mail		A 	10.25.2.109
+www			CNAME	ns1
